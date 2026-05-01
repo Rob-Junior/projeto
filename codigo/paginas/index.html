@@ -74,5 +74,36 @@
                 </div>
             </form>
         </div>
+
+        <!-- Formulário de Alteração -->
+        <div class="formsAlteracao">
+            <h2>Verificar Dados</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icone"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Qual é o seu Username?</label>
+                </div>
+                <div class="input-box">
+                    <span class="icone"><ion-icon name="mail"></ion-icon></span>
+                    <!-- Adicione um ID ao input de email -->
+                    <input type="email" id="loginEmail" required>
+
+                    <label>Qual é o seu E-mail?</label>
+                </div>
+
+                <button type="submit" class="btn">Verificar Senha</button> <!-- Botão de Verificar Senha -->
+
+                <!-- ✅ Área da mensagem -->
+                <div class="mensagem-recuperacao" style="display:none;"></div>
+
+                <div class="loginTela">
+                    <p>Encontrou sua conta?<a href="#" class="telaLogin"> Login</a></p>
+                </div>
+                <div class="loginRegister">
+                    <p>Não encontrou sua conta? <a href="#" class="registrar">Register</a></p>
+                </div>
+            </form>
+        </div>
         
 </body>
