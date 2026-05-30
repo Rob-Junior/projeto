@@ -8,105 +8,69 @@
 }
 
 body{
-
     padding-top: 100px;
-
     overflow-x: hidden;
-
     background:
     radial-gradient(circle at top left, #6a11cb 0%, transparent 30%),
     radial-gradient(circle at bottom right, #2575fc 0%, transparent 30%),
     linear-gradient(135deg, #0f0f1b, #141428);
-
     background-attachment: fixed;
-
     min-height: 100vh;
-
     color: white;
 }
 
 /* ========================= */
-/* HEADER */
+/* Cabeçalho */
 /* ========================= */
 
 header{
-
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     padding: 18px 80px;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     background: rgba(255,255,255,0.08);
-
     backdrop-filter: blur(14px);
-
     border-bottom: 1px solid rgba(255,255,255,0.1);
-
     z-index: 999;
 }
 
 .logo{
-
     font-size: 1.8rem;
-
     font-weight: 700;
-
     color: white;
 }
 
 .navigation{
-
     display: flex;
-
     align-items: center;
-
     gap: 25px;
 }
 
 .navigation a{
-
     color: white;
-
     text-decoration: none;
-
     font-size: 0.95rem;
-
     position: relative;
-
     transition: 0.3s;
 }
 
 .navigation a::after{
-
     content: '';
-
     position: absolute;
-
     left: 0;
     bottom: -6px;
-
     width: 100%;
     height: 2px;
-
     background: #8f5cff;
-
     transform: scaleX(0);
-
     transition: 0.3s;
 }
 
 .navigation a:hover::after{
-
     transform: scaleX(1);
 }
 
@@ -114,32 +78,24 @@ header{
 /* BOTÃO LOGIN */
 /* ========================= */
 
-.btnLogin{
-
+.navigation .btnLogin {
     width: 130px;
-
-    height: 45px;
-
-    border: none;
-
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
     border-radius: 50px;
-
-    background: linear-gradient(135deg,#6a11cb,#2575fc);
-
-    color: white;
-
-    font-weight: 600;
-
     cursor: pointer;
-
-    transition: 0.3s;
+    font: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
 }
 
-.btnLogin:hover{
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 10px 20px rgba(37,117,252,0.3);
+.navigation .btnLogin:hover {
+    background: #fff;
+    color: #162938;
 }
 
 /* ========================= */
@@ -147,43 +103,37 @@ header{
 /* ========================= */
 
 .sobressair{
-
     position: fixed;
-
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%) scale(0);
 
-    width: 400px;
-
+    width: 420px;
     height: 440px;
 
-    background: rgba(255,255,255,0.08);
+    /* Fundo sólido */
+    background: #1b1f38;
 
     border: 1px solid rgba(255,255,255,0.1);
 
-    backdrop-filter: blur(20px);
+    border-radius: 25px;
 
-    border-radius: 24px;
-
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow:
+        0 0 40px rgba(106,17,203,0.35),
+        0 0 80px rgba(37,117,252,0.15);
 
     overflow: hidden;
-
     z-index: 1000;
 
-    transition: 0.4s ease;
+    transition: .4s ease;
 }
 
 .sobressair.ativoLogin{
-
     transform: translate(-50%, -50%) scale(1);
 }
 
 .sobressair.ativo{
-
-    height: 540px;
+    height: 600px; /* aumentado para caber o texto */
 }
 
 .sobressair.ativot{
@@ -194,8 +144,42 @@ header{
 .formsLogin,
 .formsRegister,
 .formsAlteracao{
+    position: absolute;
+    top: 0;
+    left: 0;
 
+    width: 100%;
     padding: 40px;
+}
+.formsRegister,
+.formsAlteracao{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sobressair.ativo .formsLogin{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-400px);
+}
+
+.sobressair.ativo .formsRegister{
+    opacity: 1;
+    visibility: visible;
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.sobressair.ativot .formsLogin{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-400px);
+}
+
+.sobressair.ativot .formsAlteracao{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
 .formsLogin h2,
@@ -207,6 +191,35 @@ header{
     margin-bottom: 25px;
 
     color: white;
+}
+
+.sobressair .fechar{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 9999;
+}
+
+.sobressair .fechar:hover{
+    transform: rotate(90deg) scale(1.1);
+    background: #ff3045;
+}
+
+#tipoUsuario option{
+    background: #1b1f38;
+    color: rgb(255, 255, 255);
 }
 
 /* ========================= */
