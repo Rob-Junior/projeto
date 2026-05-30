@@ -328,6 +328,8 @@ function renderizarProdutos() {
     const container = document.getElementById('produtosContainer');
     if (!container) return;
 
+    container.innerHTML = "";
+    
     let lista = [...produtosGlobais];
 
     // FILTRO CATEGORIA
@@ -428,14 +430,10 @@ function renderizarProdutos() {
             
             <!-- BOTÃO FAVORITAR -->
             <button
-
                 class="btnWishlist"
-
-                onclick='adicionarWishlist(${JSON.stringify(produto)})'
+                onclick='adicionarWishlist(${JSON.stringify(produto).replace(/'/g, "&apos;")})'
             >
-
                 Favoritar
-
             </button>
             
             <!-- BOTÃO COMPRAR -->

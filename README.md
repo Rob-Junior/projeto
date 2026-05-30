@@ -23,3 +23,5 @@ Linguagens: JavaScript - CSS - SQL - HTML - PHP
 - Pedro Henrique Sousa da Silva
 - João Vitor Jesus dos Santos
 - Nayla Oliveira de Jesus
+
+OBS: Documento adicionado na pasta 'documentacao'

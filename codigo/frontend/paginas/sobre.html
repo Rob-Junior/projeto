@@ -12,10 +12,11 @@
     <header>
         <h2 class="logo">TTRAIO Web</h2>
         <nav class="navigation">
-            <a href="index.html">Início</a>
-            <a href="sobre.html" class="ativo">Sobre</a>
+            <a href="index.html">Inicio</a>
+            <a href="sobre.html">Sobre</a>
             <a href="produto.html">Produtos</a>
             <a href="contatos.html">Contatos</a>
+            <a href="wishlist.html">Lista de Desejos</a>
             <a href="carrinho.html" class="btnCarrinho">
                 <ion-icon name="cart-outline"></ion-icon>
                 <span id="qtdCarrinho">0</span>
@@ -31,6 +32,110 @@
         </div>
     </header>
 
+    <div class="sobressair">
+        <!-- X do site -->
+        <span class="fechar"><ion-icon name="close"></ion-icon></span>
+        <!-- Formulário de Login -->
+        <div class="formsLogin">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icone"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icone"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <!-- Botão de esqueci senha -->
+                <div class="esqueciSenha">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#" class="alterar">Forgot Password</a>
+                </div>
+
+                <!-- Botão de Logar -->
+                <button type="submit" class="btn">Login</button> 
+                <!-- Botão de Registrar -->
+                <div class="loginRegister">
+                    <p>Não há conta? <a href="#" class="registrar">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Formulário de Registro -->
+        <div class="formsRegister"> 
+            <h2>Registrar-se</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icone"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icone"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icone"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="input-box">
+                    <select id="tipoUsuario" required>
+                        <option value="">Selecione o tipo</option>
+                        <option value="cliente">Cliente</option>
+                        <option value="vendedor">Vendedor</option>
+                    </select>
+                </div>
+
+                <div class="termosCondicoes">
+                    <label><input type="checkbox">I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Registrar-se</button> <!-- Botão de Registrar-se -->
+
+                <div class="loginTela">
+                    <p>Já possui uma conta?<a href="#" class="telaLogin"> Login</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Formulário de Verificação de Senha -->
+        <div class="formsAlteracao"> 
+            <h2>Verificar Dados</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icone"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Qual é o seu Username?</label>
+                </div>
+                <div class="input-box">
+                    <span class="icone"><ion-icon name="mail"></ion-icon></span>
+                    <!-- Adicione um ID ao input de email -->
+                    <input type="email" id="loginEmail" required>
+
+                    <label>Qual é o seu E-mail?</label>
+                </div>
+
+                <button type="submit" class="btn">Verificar Senha</button> <!-- Botão de Verificar Senha -->
+
+                <!-- ✅ Área da mensagem -->
+                <div class="mensagem-recuperacao" style="display:none;"></div>
+
+                <div class="loginTela">
+                    <p>Encontrou sua conta?<a href="#" class="telaLogin"> Login</a></p>
+                </div>
+                <div class="loginRegister">
+                    <p>Não encontrou sua conta? <a href="#" class="registrar">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
    
     <!-- SEÇÃO PRINCIPAL SOBRE         -->
     
